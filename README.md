@@ -70,4 +70,4 @@ The ontology is preserved byte for byte. The resource catalog is separate and us
 
 ## Notebooks
 
-[Notebook workflows](Notebook/README.md) cover setup, data, training, SPARQL execution, evaluation and adaptive recommendation using the existing package.
+[Notebook workflows](Notebook/README.md) cover data, training, SPARQL execution, evaluation and adaptive recommendation using the existing package.

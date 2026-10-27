@@ -4,7 +4,6 @@ Follow the workflow below with the project Python kernel. All modeling, training
 
 | Notebook | Operation |
 |---|---|
-| [Setup](Setup/setup.ipynb) | Clone, install, inspect and verify |
 | [Data](Data/data.ipynb) | Load, validate, split and serialize |
 | [mT5](Training/mt5.ipynb) | Preflight, download and fine-tune |
 | [BKT](Training/bkt.ipynb) | Fit and update mastery |
