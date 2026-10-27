@@ -7,3 +7,4 @@ dist/
 artifacts/
 data/reviewed/
 .env
+.ipynb_checkpoints/

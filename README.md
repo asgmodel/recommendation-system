@@ -67,3 +67,7 @@ tests/                Functional and methodological checks
 ```
 
 The ontology is preserved byte for byte. The resource catalog is separate and uses a declared duration extension. Development data and saved development results are synthetic. Pretrained and fine-tuned mT5 weights are not distributed. Dueling Double DQN is an optional transition-based experiment and is not enabled in the default recommendation pipeline.
+
+## Notebooks
+
+[Notebook workflows](Notebook/README.md) cover setup, data, training, SPARQL execution, evaluation and adaptive recommendation using the existing package.
