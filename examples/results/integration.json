@@ -1,0 +1,364 @@
+{
+  "mode": "synthetic_integration",
+  "query_generator": "template_baseline",
+  "bkt_parameters": "configured_initial_parameters",
+  "question": "Find resources for arterial blood gas interpretation.",
+  "context": {
+    "level": "Junior",
+    "minutes": 15
+  },
+  "before": {
+    "status": "ok",
+    "query": "PREFIX hlo: <http://example.org/hlo.owl#>\nPREFIX ext: <https://example.org/hlo-research/>\nSELECT DISTINCT ?resource WHERE {\n  VALUES ?skillClass { <http://example.org/hlo.owl#K002> }\n  ?resource a hlo:LearningResource ;\n    hlo:supportsObjective ?objective ;\n    hlo:recommendedFor ?level ; ext:estimatedDurationMinutes ?duration .\n  ?objective hlo:requiresCompetency ?competency .\n  ?competency hlo:developsSkill ?skill .\n  ?skill a ?skillClass .\n  ?level a hlo:Junior .\n  FILTER (?duration <= 15)\n} ORDER BY ?resource",
+    "resource_ids": [
+      "https://example.org/hlo-research/resource/K002-1",
+      "https://example.org/hlo-research/resource/K002-2",
+      "https://example.org/hlo-research/resource/K002-4",
+      "https://example.org/hlo-research/resource/K002-5"
+    ],
+    "execution": {
+      "checks": {
+        "syntax_valid": true,
+        "known_identifiers": true,
+        "query_form": "SelectQuery",
+        "semantic_correctness": "not_proven"
+      },
+      "result": {
+        "kind": "SELECT",
+        "variables": [
+          "resource"
+        ],
+        "rows": [
+          [
+            "<https://example.org/hlo-research/resource/K002-1>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-2>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-4>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-5>"
+          ]
+        ],
+        "truncated": false
+      },
+      "ontology_sha256": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+      "catalog_sha256": "9821864fc6b2d6722663c15ff8cdb099074c4fc66b195e567bfa729774411a36",
+      "elapsed_seconds": 0.919274175000055,
+      "cache_hit": false
+    },
+    "candidate_errors": [],
+    "target_skills": [
+      "http://example.org/hlo.owl#K002"
+    ],
+    "generator": "template",
+    "ranked": [
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-1",
+        "title": "Arterial Blood Gas Interpretation Primer",
+        "score": 0.8912634271099744,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.78,
+          "time": 0.6,
+          "context": 1.0,
+          "gap": 0.8838874680306905,
+          "readiness": 0.962915601023018
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.11611253196930947,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-5",
+        "title": "Arterial Blood Gas Interpretation Short Review",
+        "score": 0.879847399829497,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.84,
+          "time": 0.4666666666666667,
+          "context": 1.0,
+          "gap": 0.8838874680306905,
+          "readiness": 0.8870843989769821
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.11611253196930947,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-2",
+        "title": "Arterial Blood Gas Interpretation Worked Case",
+        "score": 0.8185140664961637,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.88,
+          "time": 0.19999999999999996,
+          "context": 1.0,
+          "gap": 0.8838874680306905,
+          "readiness": 0.687084398976982
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.11611253196930947,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-4",
+        "title": "Arterial Blood Gas Interpretation Extended Case",
+        "score": 0.7675140664961636,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.96,
+          "time": 0.19999999999999996,
+          "context": 1.0,
+          "gap": 0.8838874680306905,
+          "readiness": 0.43708439897698204
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.11611253196930947,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      }
+    ],
+    "eligible_count": 4,
+    "rejected": [],
+    "data_status": "synthetic",
+    "gaps": {
+      "http://example.org/hlo.owl#K002": {
+        "status": "knowledge_gap",
+        "priority": 0.8838874680306905
+      }
+    },
+    "ontology_sha256": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+    "catalog_sha256": "9821864fc6b2d6722663c15ff8cdb099074c4fc66b195e567bfa729774411a36"
+  },
+  "after": {
+    "status": "ok",
+    "query": "PREFIX hlo: <http://example.org/hlo.owl#>\nPREFIX ext: <https://example.org/hlo-research/>\nSELECT DISTINCT ?resource WHERE {\n  VALUES ?skillClass { <http://example.org/hlo.owl#K002> }\n  ?resource a hlo:LearningResource ;\n    hlo:supportsObjective ?objective ;\n    hlo:recommendedFor ?level ; ext:estimatedDurationMinutes ?duration .\n  ?objective hlo:requiresCompetency ?competency .\n  ?competency hlo:developsSkill ?skill .\n  ?skill a ?skillClass .\n  ?level a hlo:Junior .\n  FILTER (?duration <= 15)\n} ORDER BY ?resource",
+    "resource_ids": [
+      "https://example.org/hlo-research/resource/K002-1",
+      "https://example.org/hlo-research/resource/K002-2",
+      "https://example.org/hlo-research/resource/K002-4",
+      "https://example.org/hlo-research/resource/K002-5"
+    ],
+    "execution": {
+      "checks": {
+        "syntax_valid": true,
+        "known_identifiers": true,
+        "query_form": "SelectQuery",
+        "semantic_correctness": "not_proven"
+      },
+      "result": {
+        "kind": "SELECT",
+        "variables": [
+          "resource"
+        ],
+        "rows": [
+          [
+            "<https://example.org/hlo-research/resource/K002-1>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-2>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-4>"
+          ],
+          [
+            "<https://example.org/hlo-research/resource/K002-5>"
+          ]
+        ],
+        "truncated": false
+      },
+      "ontology_sha256": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+      "catalog_sha256": "9821864fc6b2d6722663c15ff8cdb099074c4fc66b195e567bfa729774411a36",
+      "elapsed_seconds": 0.919274175000055,
+      "cache_hit": true
+    },
+    "candidate_errors": [],
+    "target_skills": [
+      "http://example.org/hlo.owl#K002"
+    ],
+    "generator": "template",
+    "ranked": [
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-4",
+        "title": "Arterial Blood Gas Interpretation Extended Case",
+        "score": 0.8180052279036939,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.96,
+          "time": 0.19999999999999996,
+          "context": 1.0,
+          "gap": 1.6085857519776425e-05,
+          "readiness": 0.9000120643931399
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.9999839141424802,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-2",
+        "title": "Arterial Blood Gas Interpretation Worked Case",
+        "score": 0.7190052279036939,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.88,
+          "time": 0.19999999999999996,
+          "context": 1.0,
+          "gap": 1.6085857519776425e-05,
+          "readiness": 0.6500120643931399
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.9999839141424802,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-5",
+        "title": "Arterial Blood Gas Interpretation Short Review",
+        "score": 0.6603385612370273,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.84,
+          "time": 0.4666666666666667,
+          "context": 1.0,
+          "gap": 1.6085857519776425e-05,
+          "readiness": 0.4500120643931398
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.9999839141424802,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      },
+      {
+        "resource_id": "https://example.org/hlo-research/resource/K002-1",
+        "title": "Arterial Blood Gas Interpretation Primer",
+        "score": 0.6040052279036939,
+        "features": {
+          "relevance": 1.0,
+          "quality": 0.78,
+          "time": 0.6,
+          "context": 1.0,
+          "gap": 1.6085857519776425e-05,
+          "readiness": 0.3000120643931399
+        },
+        "covered_skills": [
+          "http://example.org/hlo.owl#K002"
+        ],
+        "explanation": {
+          "eligibility": "passed",
+          "adaptive": true,
+          "mastery_used": 0.9999839141424802,
+          "weights": {
+            "relevance": 0.2,
+            "quality": 0.3,
+            "time": 0.05,
+            "context": 0.05,
+            "gap": 0.1,
+            "readiness": 0.3
+          }
+        }
+      }
+    ],
+    "eligible_count": 4,
+    "rejected": [],
+    "data_status": "synthetic",
+    "gaps": {
+      "http://example.org/hlo.owl#K002": {
+        "status": "no_gap",
+        "priority": 0.0
+      }
+    },
+    "ontology_sha256": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+    "catalog_sha256": "9821864fc6b2d6722663c15ff8cdb099074c4fc66b195e567bfa729774411a36"
+  }
+}

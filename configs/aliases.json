@@ -1,0 +1,9 @@
+{
+  "clinical order entry": "http://example.org/hlo.owl#K001",
+  "arterial blood gas interpretation": "http://example.org/hlo.owl#K002",
+  "central line insertion": "http://example.org/hlo.owl#K003",
+  "trauma assessment": "http://example.org/hlo.owl#K004",
+  "point of care ultrasound": "http://example.org/hlo.owl#K005",
+  "abg": "http://example.org/hlo.owl#K002",
+  "pocus": "http://example.org/hlo.owl#K005"
+}

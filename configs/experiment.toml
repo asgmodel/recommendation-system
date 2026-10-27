@@ -1,0 +1,7 @@
+seed = 42
+runtime = "configs/default.toml"
+test = "data/development/questions.test.jsonl"
+output = "artifacts/experiments/development-001"
+generator = "template"
+checkpoint = "artifacts/mt5/run-001"
+bootstrap_samples = 500

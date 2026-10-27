@@ -1,0 +1,289 @@
+@prefix ext: <https://example.org/hlo-research/> .
+@prefix hlo: <http://example.org/hlo.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ext:estimatedDurationMinutes a owl:DatatypeProperty ;
+    rdfs:domain hlo:LearningResource ;
+    rdfs:range xsd:integer .
+
+<https://example.org/hlo-research/resource/K001-1> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Primer"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 6 .
+
+<https://example.org/hlo-research/resource/K001-2> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Worked Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K001-3> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Advanced Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 18 .
+
+<https://example.org/hlo-research/resource/K001-4> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Extended Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Junior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K001-5> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Short Review"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 8 .
+
+<https://example.org/hlo-research/resource/K001-6> a hlo:LearningResource ;
+    rdfs:label "Clinical Order Entry Reference Chapter"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K001> ;
+    ext:estimatedDurationMinutes 45 .
+
+<https://example.org/hlo-research/resource/K002-1> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Primer"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 6 .
+
+<https://example.org/hlo-research/resource/K002-2> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Worked Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K002-3> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Advanced Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 18 .
+
+<https://example.org/hlo-research/resource/K002-4> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Extended Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Junior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K002-5> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Short Review"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 8 .
+
+<https://example.org/hlo-research/resource/K002-6> a hlo:LearningResource ;
+    rdfs:label "Arterial Blood Gas Interpretation Reference Chapter"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K002> ;
+    ext:estimatedDurationMinutes 45 .
+
+<https://example.org/hlo-research/resource/K003-1> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Primer"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 6 .
+
+<https://example.org/hlo-research/resource/K003-2> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Worked Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K003-3> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Advanced Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 18 .
+
+<https://example.org/hlo-research/resource/K003-4> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Extended Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Junior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K003-5> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Short Review"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 8 .
+
+<https://example.org/hlo-research/resource/K003-6> a hlo:LearningResource ;
+    rdfs:label "Central Line Insertion Reference Chapter"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K003> ;
+    ext:estimatedDurationMinutes 45 .
+
+<https://example.org/hlo-research/resource/K004-1> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Primer"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 6 .
+
+<https://example.org/hlo-research/resource/K004-2> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Worked Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K004-3> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Advanced Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 18 .
+
+<https://example.org/hlo-research/resource/K004-4> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Extended Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Junior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K004-5> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Short Review"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 8 .
+
+<https://example.org/hlo-research/resource/K004-6> a hlo:LearningResource ;
+    rdfs:label "Trauma Assessment Reference Chapter"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K004> ;
+    ext:estimatedDurationMinutes 45 .
+
+<https://example.org/hlo-research/resource/K005-1> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Primer"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 6 .
+
+<https://example.org/hlo-research/resource/K005-2> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Worked Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K005-3> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Advanced Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 18 .
+
+<https://example.org/hlo-research/resource/K005-4> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Extended Case"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Junior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 12 .
+
+<https://example.org/hlo-research/resource/K005-5> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Short Review"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 8 .
+
+<https://example.org/hlo-research/resource/K005-6> a hlo:LearningResource ;
+    rdfs:label "Point of Care Ultrasound Reference Chapter"@en ;
+    hlo:recommendedFor <https://example.org/hlo-research/level/Fellow>,
+        <https://example.org/hlo-research/level/Junior>,
+        <https://example.org/hlo-research/level/Senior> ;
+    hlo:supportsObjective <https://example.org/hlo-research/objective/K005> ;
+    ext:estimatedDurationMinutes 45 .
+
+<https://example.org/hlo-research/competency/K001> a hlo:Competency ;
+    hlo:developsSkill <https://example.org/hlo-research/skill/K001> .
+
+<https://example.org/hlo-research/competency/K002> a hlo:Competency ;
+    hlo:developsSkill <https://example.org/hlo-research/skill/K002> .
+
+<https://example.org/hlo-research/competency/K003> a hlo:Competency ;
+    hlo:developsSkill <https://example.org/hlo-research/skill/K003> .
+
+<https://example.org/hlo-research/competency/K004> a hlo:Competency ;
+    hlo:developsSkill <https://example.org/hlo-research/skill/K004> .
+
+<https://example.org/hlo-research/competency/K005> a hlo:Competency ;
+    hlo:developsSkill <https://example.org/hlo-research/skill/K005> .
+
+<https://example.org/hlo-research/skill/K001> a hlo:ClinicalSkill,
+        hlo:K001 .
+
+<https://example.org/hlo-research/skill/K002> a hlo:ClinicalSkill,
+        hlo:K002 .
+
+<https://example.org/hlo-research/skill/K003> a hlo:ClinicalSkill,
+        hlo:K003 .
+
+<https://example.org/hlo-research/skill/K004> a hlo:ClinicalSkill,
+        hlo:K004 .
+
+<https://example.org/hlo-research/skill/K005> a hlo:ClinicalSkill,
+        hlo:K005 .
+
+<https://example.org/hlo-research/objective/K001> a hlo:LearningObjective ;
+    hlo:requiresCompetency <https://example.org/hlo-research/competency/K001> .
+
+<https://example.org/hlo-research/objective/K002> a hlo:LearningObjective ;
+    hlo:requiresCompetency <https://example.org/hlo-research/competency/K002> .
+
+<https://example.org/hlo-research/objective/K003> a hlo:LearningObjective ;
+    hlo:requiresCompetency <https://example.org/hlo-research/competency/K003> .
+
+<https://example.org/hlo-research/objective/K004> a hlo:LearningObjective ;
+    hlo:requiresCompetency <https://example.org/hlo-research/competency/K004> .
+
+<https://example.org/hlo-research/objective/K005> a hlo:LearningObjective ;
+    hlo:requiresCompetency <https://example.org/hlo-research/competency/K005> .
+
+<https://example.org/hlo-research/level/Fellow> a hlo:Fellow,
+        hlo:ResidentLevel .
+
+<https://example.org/hlo-research/level/Junior> a hlo:Junior,
+        hlo:ResidentLevel .
+
+<https://example.org/hlo-research/level/Senior> a hlo:ResidentLevel,
+        hlo:Senior .
+

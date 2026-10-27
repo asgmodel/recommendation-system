@@ -1,0 +1,13 @@
+seed = 42
+train = "data/reviewed/transitions.train.jsonl"
+validation = "data/reviewed/transitions.validation.jsonl"
+output = "artifacts/policy/run-001"
+state_dim = 4
+action_count = 3
+hidden = 64
+steps = 1000
+batch_size = 32
+learning_rate = 0.0003
+discount = 0.95
+target_update = 100
+report_every = 100

@@ -1,0 +1,14 @@
+metric,before,after,difference
+triples,14651,17839,3188
+classes,1642,1642,0
+source_identifier_values,1593,1593,0
+concept_code_values,0,1610,1610
+parent_cases,300,300,0
+parent_passed,300,300,0
+parent_accuracy,1.0,1.0,0.0
+reference_cases,200,200,0
+reference_passed,0,200,200
+reference_accuracy,0.0,1.0,1.0
+total_cases,500,500,0
+total_passed,300,500,200
+overall_accuracy,0.6,1.0,0.4

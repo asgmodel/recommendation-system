@@ -1,0 +1,570 @@
+{
+  "data_status": "synthetic",
+  "resources": [
+    {
+      "id": "https://example.org/hlo-research/resource/K001-1",
+      "title": "Clinical Order Entry Primer",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 6,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.78,
+      "difficulty": 0.2,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K001-2",
+      "title": "Clinical Order Entry Worked Case",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.88,
+      "difficulty": 0.55,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K001-3",
+      "title": "Clinical Order Entry Advanced Case",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 18,
+      "levels": [
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.98,
+      "difficulty": 0.85,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K001-4",
+      "title": "Clinical Order Entry Extended Case",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior"
+      ],
+      "quality": 0.96,
+      "difficulty": 0.8,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K001-5",
+      "title": "Clinical Order Entry Short Review",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 8,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.84,
+      "difficulty": 0.35,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K001-6",
+      "title": "Clinical Order Entry Reference Chapter",
+      "skills": [
+        "http://example.org/hlo.owl#K001"
+      ],
+      "minutes": 45,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.99,
+      "difficulty": 0.5,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-1",
+      "title": "Arterial Blood Gas Interpretation Primer",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 6,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.78,
+      "difficulty": 0.2,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-2",
+      "title": "Arterial Blood Gas Interpretation Worked Case",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.88,
+      "difficulty": 0.55,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-3",
+      "title": "Arterial Blood Gas Interpretation Advanced Case",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 18,
+      "levels": [
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.98,
+      "difficulty": 0.85,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-4",
+      "title": "Arterial Blood Gas Interpretation Extended Case",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior"
+      ],
+      "quality": 0.96,
+      "difficulty": 0.8,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-5",
+      "title": "Arterial Blood Gas Interpretation Short Review",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 8,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.84,
+      "difficulty": 0.35,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K002-6",
+      "title": "Arterial Blood Gas Interpretation Reference Chapter",
+      "skills": [
+        "http://example.org/hlo.owl#K002"
+      ],
+      "minutes": 45,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.99,
+      "difficulty": 0.5,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-1",
+      "title": "Central Line Insertion Primer",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 6,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.78,
+      "difficulty": 0.2,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-2",
+      "title": "Central Line Insertion Worked Case",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.88,
+      "difficulty": 0.55,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-3",
+      "title": "Central Line Insertion Advanced Case",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 18,
+      "levels": [
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.98,
+      "difficulty": 0.85,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-4",
+      "title": "Central Line Insertion Extended Case",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior"
+      ],
+      "quality": 0.96,
+      "difficulty": 0.8,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-5",
+      "title": "Central Line Insertion Short Review",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 8,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.84,
+      "difficulty": 0.35,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K003-6",
+      "title": "Central Line Insertion Reference Chapter",
+      "skills": [
+        "http://example.org/hlo.owl#K003"
+      ],
+      "minutes": 45,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.99,
+      "difficulty": 0.5,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-1",
+      "title": "Trauma Assessment Primer",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 6,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.78,
+      "difficulty": 0.2,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-2",
+      "title": "Trauma Assessment Worked Case",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.88,
+      "difficulty": 0.55,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-3",
+      "title": "Trauma Assessment Advanced Case",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 18,
+      "levels": [
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.98,
+      "difficulty": 0.85,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-4",
+      "title": "Trauma Assessment Extended Case",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior"
+      ],
+      "quality": 0.96,
+      "difficulty": 0.8,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-5",
+      "title": "Trauma Assessment Short Review",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 8,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.84,
+      "difficulty": 0.35,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K004-6",
+      "title": "Trauma Assessment Reference Chapter",
+      "skills": [
+        "http://example.org/hlo.owl#K004"
+      ],
+      "minutes": 45,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.99,
+      "difficulty": 0.5,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-1",
+      "title": "Point of Care Ultrasound Primer",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 6,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.78,
+      "difficulty": 0.2,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-2",
+      "title": "Point of Care Ultrasound Worked Case",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.88,
+      "difficulty": 0.55,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-3",
+      "title": "Point of Care Ultrasound Advanced Case",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 18,
+      "levels": [
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.98,
+      "difficulty": 0.85,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-4",
+      "title": "Point of Care Ultrasound Extended Case",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 12,
+      "levels": [
+        "Junior"
+      ],
+      "quality": 0.96,
+      "difficulty": 0.8,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-5",
+      "title": "Point of Care Ultrasound Short Review",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 8,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.84,
+      "difficulty": 0.35,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    },
+    {
+      "id": "https://example.org/hlo-research/resource/K005-6",
+      "title": "Point of Care Ultrasound Reference Chapter",
+      "skills": [
+        "http://example.org/hlo.owl#K005"
+      ],
+      "minutes": 45,
+      "levels": [
+        "Junior",
+        "Senior",
+        "Fellow"
+      ],
+      "quality": 0.99,
+      "difficulty": 0.5,
+      "activity": "Any",
+      "location": "Any",
+      "prerequisites": [],
+      "active": true
+    }
+  ]
+}

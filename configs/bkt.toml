@@ -1,0 +1,5 @@
+seed = 42
+train = "data/reviewed/assessments.train.jsonl"
+validation = "data/reviewed/assessments.validation.jsonl"
+output = "artifacts/bkt/run-001"
+restarts = 5

@@ -1,0 +1,220 @@
+{
+  "created_utc": "2026-10-26T18:50:57.225007+00:00",
+  "seed": 42,
+  "python": "3.12.14",
+  "versions": {
+    "hlo-recommender": null,
+    "rdflib": "7.6.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": null,
+    "transformers": null
+  },
+  "input_sha256": {
+    "test": "d24113ee34226dc5b0f2fa7e38ae98d15ae635b53e4b27c38e319a7f8c9a145e",
+    "ontology": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+    "catalog": "9821864fc6b2d6722663c15ff8cdb099074c4fc66b195e567bfa729774411a36",
+    "resources": "34df32e169a84bc164dc9987b449a12fecda199c627c1e59fb5dcad6324fd3d6",
+    "aliases": "457cc0dff69d0f629f672deaa9bab30030696d9d7010cd974be27bb48aac75ea",
+    "runtime_config": "ae394e7aa1ff04343dca61931a3332deafbef6c4dad5a2778114ead8f87e0149",
+    "experiment_config": "6b702ab1757d81b0e01ae62d4240472f4b9911739a929b2f0834c9d6f57039c1"
+  },
+  "experiment": "query_and_adaptation",
+  "data_status": [
+    "synthetic"
+  ],
+  "reference_kinds": [
+    "synthetic_rule"
+  ],
+  "generators": [
+    "template"
+  ],
+  "query_metrics": {
+    "template": {
+      "n": 9,
+      "answer_f1": 1.0,
+      "nonempty_f1": 1.0,
+      "empty_f1": null,
+      "valid_rate": 1.0,
+      "records": [
+        {
+          "id": "K003-Fellow-1",
+          "family_id": "K003-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K003-Fellow-2",
+          "family_id": "K003-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K003-Fellow-3",
+          "family_id": "K003-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Senior-1",
+          "family_id": "K005-Senior",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Senior-2",
+          "family_id": "K005-Senior",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Senior-3",
+          "family_id": "K005-Senior",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Fellow-1",
+          "family_id": "K005-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Fellow-2",
+          "family_id": "K005-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        },
+        {
+          "id": "K005-Fellow-3",
+          "family_id": "K005-Fellow",
+          "answer_f1": 1.0,
+          "execution_valid": true,
+          "empty_reference": false,
+          "error": null
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "template_static": {
+      "n": 9,
+      "metrics": {
+        "top1": 1.0,
+        "hit3": 1.0,
+        "hit5": 1.0,
+        "mrr": 1.0,
+        "map_at_k": 1.0,
+        "ndcg_at_k": 0.9160828006893671,
+        "precision_at_k": 0.5333333333333333
+      },
+      "nonempty_reference_cases": 9,
+      "bootstrap": {
+        "resampling_unit": "question_family",
+        "groups": 3,
+        "samples": 500,
+        "confidence_level": 0.95,
+        "intervals": {
+          "top1": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "hit3": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "hit5": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "mrr": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "map_at_k": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "ndcg_at_k": {
+            "low": 0.9160828006893671,
+            "high": 0.9160828006893671
+          }
+        }
+      }
+    },
+    "template_adaptive": {
+      "n": 9,
+      "metrics": {
+        "top1": 1.0,
+        "hit3": 1.0,
+        "hit5": 1.0,
+        "mrr": 1.0,
+        "map_at_k": 1.0,
+        "ndcg_at_k": 1.0,
+        "precision_at_k": 0.5333333333333333
+      },
+      "nonempty_reference_cases": 9,
+      "bootstrap": {
+        "resampling_unit": "question_family",
+        "groups": 3,
+        "samples": 500,
+        "confidence_level": 0.95,
+        "intervals": {
+          "top1": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "hit3": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "hit5": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "mrr": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "map_at_k": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "ndcg_at_k": {
+            "low": 1.0,
+            "high": 1.0
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "retrieval_and_ranking_only; no educational treatment effect is estimated",
+  "parameters": {
+    "weights": {
+      "relevance": 0.2,
+      "quality": 0.3,
+      "time": 0.05,
+      "context": 0.05,
+      "gap": 0.1,
+      "readiness": 0.3
+    },
+    "top_k": 5,
+    "initial_mastery": 0.2
+  }
+}

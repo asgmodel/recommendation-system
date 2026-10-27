@@ -1,0 +1,5 @@
+# Core versions used for the bundled development checks.
+rdflib==7.6.0
+pyparsing==3.3.3
+numpy==2.3.5
+scipy==1.17.0

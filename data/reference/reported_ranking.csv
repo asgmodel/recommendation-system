@@ -1,0 +1,7 @@
+metric,baseline_percent,enriched_percent,point_gain,relative_gain_percent,operational_meaning,evaluation_scope
+Top-1 accuracy,62.3,74.2,11.9,19.1,"First-ranked item is relevant","500 rule-generated synthetic recommendation scenarios"
+Hit@3,75.8,86.1,10.3,13.6,"At least one relevant item appears in the top three","500 rule-generated synthetic recommendation scenarios"
+Hit@5,83.1,92.3,9.2,11.1,"At least one relevant item appears in the top five","500 rule-generated synthetic recommendation scenarios"
+MRR,69.4,80.3,10.9,15.7,"Relevant items tend to occur early in the ranking","500 rule-generated synthetic recommendation scenarios"
+MAP,70.9,81.5,10.6,15.0,"Relevant items are well ordered across the ranked list","500 rule-generated synthetic recommendation scenarios"
+PPA,,89.7,,,"Recommendation satisfies declared profile-policy constraints","Enriched HLO; baseline PPA not reported in Table 6"

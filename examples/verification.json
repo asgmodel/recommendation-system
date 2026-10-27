@@ -1,0 +1,37 @@
+{
+  "core_tests": {
+    "status": "passed",
+    "count": 18
+  },
+  "package_build": "passed",
+  "installed_wheel_inspection": "passed",
+  "ontology_sha256": "b8e8bad2545126b90e5bc2a6d6fdfb47af4846ee8fda39eaf56326bd0e9aa342",
+  "ontology_modified": false,
+  "bkt_training": {
+    "status": "executed",
+    "data_status": "synthetic",
+    "train_events": 960,
+    "validation_events": 320,
+    "test_events": 320
+  },
+  "ranking_experiment": {
+    "status": "executed",
+    "data_status": "synthetic",
+    "test_questions": 9,
+    "test_families": 3,
+    "arms": [
+      "template_static",
+      "template_adaptive"
+    ]
+  },
+  "mt5": {
+    "data_preflight": "passed",
+    "training": "not_executed",
+    "pretrained_weights_included": false,
+    "fine_tuned_weights_included": false
+  },
+  "dueling_double_dqn": {
+    "transition_validation": "tested",
+    "training": "not_executed"
+  }
+}

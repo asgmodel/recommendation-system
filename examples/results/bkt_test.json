@@ -1,0 +1,85 @@
+{
+  "n": 320,
+  "log_loss": 0.5833287113386061,
+  "brier": 0.20133763741179553,
+  "accuracy": 0.7,
+  "auc": 0.7185924739166113,
+  "calibration": [
+    {
+      "bin": 3,
+      "n": 179,
+      "predicted": 0.36311733466109414,
+      "observed": 0.33519553072625696
+    },
+    {
+      "bin": 4,
+      "n": 4,
+      "predicted": 0.4733719969916106,
+      "observed": 0.25
+    },
+    {
+      "bin": 5,
+      "n": 47,
+      "predicted": 0.5575065017105758,
+      "observed": 0.6170212765957447
+    },
+    {
+      "bin": 6,
+      "n": 12,
+      "predicted": 0.6302854469055363,
+      "observed": 0.4166666666666667
+    },
+    {
+      "bin": 7,
+      "n": 19,
+      "predicted": 0.7789346052966628,
+      "observed": 0.8947368421052632
+    },
+    {
+      "bin": 8,
+      "n": 10,
+      "predicted": 0.8205173297750182,
+      "observed": 0.5
+    },
+    {
+      "bin": 9,
+      "n": 49,
+      "predicted": 0.929727978974596,
+      "observed": 0.9387755102040817
+    }
+  ],
+  "constant_baseline": {
+    "n": 320,
+    "log_loss": 0.7025518092231461,
+    "brier": 0.254638671875,
+    "accuracy": 0.509375,
+    "auc": 0.5,
+    "calibration": [
+      {
+        "bin": 5,
+        "n": 320,
+        "predicted": 0.578125,
+        "observed": 0.509375
+      }
+    ]
+  },
+  "created_utc": "2026-10-26T18:50:58.888135+00:00",
+  "seed": 42,
+  "python": "3.12.14",
+  "versions": {
+    "hlo-recommender": null,
+    "rdflib": "7.6.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": null,
+    "transformers": null
+  },
+  "input_sha256": {
+    "assessments": "8797ce0a4b709309cf51ed2d90108ba56567b30c4e79a3ee15ca80509b346978",
+    "model": "2d3a2fd1d6b1595c0c194e0922cc15ec98145017708877c52ec20d7f3f1c846c"
+  },
+  "task": "knowledge_tracing_evaluation",
+  "data_status": [
+    "synthetic"
+  ]
+}

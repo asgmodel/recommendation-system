@@ -1,0 +1,12 @@
+{
+  "ontology_checks.csv": {
+    "source": "evaluation/results/comparison_summary.csv",
+    "scope": "ontology_parent_and_reference_checks"
+  },
+  "reported_ranking.csv": {
+    "source": "src/hlo/evaluation/ontology_comparison_results.csv",
+    "scope": "reported_article_ranking_metrics"
+  },
+  "status": "preserved_reference_outputs",
+  "experiments_rerun": false
+}

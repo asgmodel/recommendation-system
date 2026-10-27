@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hlo-recommender"
+version = "0.2.0"
+description = "Ontology-grounded query generation and adaptive educational recommendation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["rdflib>=7.1,<8", "numpy>=1.26,<3", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+model = ["torch>=2.4,<3", "transformers==4.57.1", "sentencepiece>=0.2,<1", "protobuf>=4,<7"]
+
+[project.scripts]
+hlo = "hlo_recommender.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

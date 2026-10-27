@@ -1,0 +1,14 @@
+{
+  "status": "data_validated",
+  "counts": {
+    "train": {
+      "records": 27,
+      "families": 9
+    },
+    "validation": {
+      "records": 9,
+      "families": 3
+    }
+  },
+  "model_loaded": false
+}

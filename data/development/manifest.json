@@ -1,0 +1,20 @@
+{
+  "data_status": "synthetic",
+  "purpose": "development_and_integration",
+  "seed": 42,
+  "question_records": 45,
+  "question_families": 15,
+  "resource_records": 30,
+  "assessment_records": 1600,
+  "references": "deterministic_synthetic_policy",
+  "question_splits": {
+    "train": 27,
+    "validation": 9,
+    "test": 9
+  },
+  "assessment_splits": {
+    "train": 960,
+    "validation": 320,
+    "test": 320
+  }
+}

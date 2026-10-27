@@ -1,0 +1,23 @@
+seed = 42
+ontology = "data/ontology/HLO_Template_LLM.owl"
+catalog = "data/development/catalog.ttl"
+resources = "data/development/resources.json"
+aliases = "configs/aliases.json"
+learner_database = "artifacts/learner.sqlite"
+query_timeout = 10.0
+max_query_rows = 1000
+top_k = 5
+
+[weights]
+relevance = 0.20
+quality = 0.30
+time = 0.05
+context = 0.05
+gap = 0.10
+readiness = 0.30
+
+[bkt]
+initial = 0.2
+learn = 0.1
+guess = 0.2
+slip = 0.1
