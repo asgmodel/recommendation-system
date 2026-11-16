@@ -75,6 +75,20 @@ def jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def show_table(title: str, rows) -> None:
+    """Display a readable table in Colab and terminal-based Python."""
+    import pandas as pd
+
+    frame = rows if isinstance(rows, pd.DataFrame) else pd.DataFrame(rows)
+    print(f"\n{title}", flush=True)
+    try:
+        from IPython.display import display
+
+        display(frame.round(4))
+    except ImportError:
+        print(frame.round(4).to_string(index=False), flush=True)
+
+
 def check_dataset(root: Path, mode: str, require_policy: bool) -> dict:
     """Fail early rather than claim reviewed learning from the synthetic set."""
     base = root / "data" / ("development" if mode == "synthetic" else "reviewed")
@@ -151,6 +165,7 @@ def write_statistics(root: Path, mode: str, out: Path) -> None:
         })
     df = pd.DataFrame(stats)
     df.to_csv(out / "dataset_statistics.csv", index=False)
+    show_table("Dataset statistics", df)
     figure, axes = plt.subplots(1, 2, figsize=(11, 4))
     df.plot(x="split", y="assessments", kind="bar", ax=axes[0], legend=False, title="Assessment records")
     df.plot(x="split", y="correct_rate", kind="bar", ax=axes[1], legend=False, ylim=(0, 1),
@@ -159,6 +174,7 @@ def write_statistics(root: Path, mode: str, out: Path) -> None:
         axis.tick_params(axis="x", rotation=0)
     plt.tight_layout()
     figure.savefig(out / "dataset_statistics.png", dpi=130)
+    plt.show()
     plt.close(figure)
 
 
@@ -175,15 +191,49 @@ def write_evaluation_charts(out: Path, bkt_out: Path, experiment_out: Path) -> N
     ax.set(xlim=(0, 1), ylim=(0, 1), xlabel="Predicted", ylabel="Observed", title="BKT calibration")
     ax.legend()
     fig.savefig(out / "bkt_calibration.png", dpi=140, bbox_inches="tight")
+    plt.show()
     plt.close(fig)
 
+    predictions = jsonl(bkt_out / "predictions.jsonl")
+    actual = [bool(row["correct"]) for row in predictions]
+    probabilities = [float(row["probability"]) for row in predictions]
+    predicted = [value >= 0.5 for value in probabilities]
+    confusion = [
+        [sum((not y and not p) for y, p in zip(actual, predicted)),
+         sum((not y and p) for y, p in zip(actual, predicted))],
+        [sum((y and not p) for y, p in zip(actual, predicted)),
+         sum((y and p) for y, p in zip(actual, predicted))],
+    ]
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4))
+    axes[0].imshow(confusion, cmap="Blues")
+    for i, row in enumerate(confusion):
+        for j, count in enumerate(row):
+            axes[0].text(j, i, str(count), ha="center", va="center")
+    axes[0].set_xticks([0, 1], ["Incorrect", "Correct"])
+    axes[0].set_yticks([0, 1], ["Incorrect", "Correct"])
+    axes[0].set(xlabel="Predicted", ylabel="Actual", title="BKT confusion matrix")
+    axes[1].hist(
+        [[p for y, p in zip(actual, probabilities) if not y],
+         [p for y, p in zip(actual, probabilities) if y]],
+        bins=12, label=["Incorrect", "Correct"], alpha=0.8,
+    )
+    axes[1].set(xlabel="Predicted P(correct)", ylabel="Frequency",
+                title="Prediction probability distribution")
+    axes[1].legend()
+    plt.tight_layout()
+    figure.savefig(out / "bkt_predictions.png", dpi=140)
+    plt.show()
+    plt.close(figure)
+
     ranking = pd.read_csv(experiment_out / "metrics.csv")
+    show_table("Ranking evaluation", ranking)
     ranking.set_index("arm")[["mrr", "map_at_k", "ndcg_at_k"]].plot(
         kind="bar", figsize=(9, 4), ylim=(0, 1), title="Recommendation ranking"
     )
     plt.xticks(rotation=20, ha="right")
     plt.tight_layout()
     plt.savefig(out / "ranking_metrics.png", dpi=140)
+    plt.show()
     plt.close()
 
 
@@ -207,13 +257,46 @@ def write_mt5_history_charts(out: Path, mt5_out: Path) -> None:
     ]
     df = pd.DataFrame(rows)
     df.to_csv(out / "mt5_training_history.csv", index=False)
+    show_table("mT5 training history", df)
     figure, axes = plt.subplots(1, 2, figsize=(11, 4))
     df.plot(x="epoch", y="train_loss", marker="o", ax=axes[0], title="mT5 training loss")
     df.plot(x="epoch", y="validation_nonempty_f1", marker="o", ax=axes[1],
             title="mT5 validation answer F1", ylim=(0, 1))
     plt.tight_layout()
     figure.savefig(out / "mt5_training_history.png", dpi=140)
+    plt.show()
     plt.close(figure)
+
+
+def write_prediction_comparison(out: Path, before: dict, after: dict | None) -> None:
+    import matplotlib.pyplot as plt
+    import pandas as pd
+
+    rows = []
+    for stage, result in (("Before", before), ("After", after)):
+        if result is None:
+            continue
+        for rank, resource in enumerate(result.get("ranked", []), 1):
+            rows.append({
+                "stage": stage, "rank": rank,
+                "title": resource["title"], "score": resource["score"],
+            })
+    if not rows:
+        print("No eligible recommendations for the selected test question.", flush=True)
+        return
+    df = pd.DataFrame(rows)
+    show_table("Generated recommendations", df)
+    df.to_csv(out / "prediction_comparison.csv", index=False)
+    fig, ax = plt.subplots(figsize=(8, 4))
+    for stage, subset in df.groupby("stage"):
+        ax.plot(subset["rank"], subset["score"], marker="o", label=stage)
+    ax.set(xlabel="Rank position", ylabel="Recommendation score",
+           title="Recommendations before / after learner update")
+    ax.legend()
+    plt.tight_layout()
+    fig.savefig(out / "prediction_comparison.png", dpi=140)
+    plt.show()
+    plt.close(fig)
 
 
 def train_pipeline(
@@ -361,6 +444,12 @@ def train_pipeline(
         root, "experiment", "--config", experiment_conf, "--generator", "both",
         "--checkpoint", checkpoint, "--output", experiment_out,
     )
+    show_table("BKT held-out test", [{
+        metric: bkt_test.get(metric) for metric in ("n", "accuracy", "auc", "brier", "log_loss")
+    }])
+    show_table("mT5 query test", [{
+        metric: query_test.get(metric) for metric in ("n", "answer_f1", "nonempty_f1", "valid_rate")
+    }])
     write_evaluation_charts(out, bkt_test_out, experiment_out)
 
     heading("11 Predictions")
@@ -404,6 +493,7 @@ def train_pipeline(
             "--learner", f"full-{run_id}", "--bkt-model", bkt_model,
             "--database", out / "learner.sqlite", "--output", out / "prediction_after.json",
         )
+    write_prediction_comparison(out, prediction, prediction_after)
 
     heading("13 Metrics and provenance")
     summary = {
