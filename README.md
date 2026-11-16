@@ -26,6 +26,44 @@ hlo recommend --generator template --question "Find resources for arterial blood
 
 The template generator is an explicit baseline. mT5 inference requires a fine-tuned checkpoint.
 
+## One-command training and Colab
+
+For an end-to-end development run (dependency installation, tests, actual BKT and mT5
+optimization, held-out evaluation, metrics, plots, and recommendations), use:
+
+```bash
+python tools/hlo_train_all.py --mode synthetic
+```
+
+Use a Python 3.11+ environment with a CUDA GPU; this command downloads
+`google/mt5-small` if it is not already cached. You can validate the dataset and
+planned stages without installing models or training:
+
+```bash
+python tools/hlo_train_all.py --mode synthetic --dry-run
+```
+
+Google Colab users can open the
+[one-click notebook](https://colab.research.google.com/github/asgmodel/recommendation-system/blob/main/Notebook/Colab/HLO_One_Click_Full_Training.ipynb),
+enable GPU under Runtime settings, and run its single code cell. It is self-contained
+and does not require uploading a second Python file.
+
+**Data provenance:** The checked-in development set is synthetic (45 questions,
+1,600 assessment events, 30 resources). Training on it updates model parameters,
+but is **not** evidence of real-world learning or recommendation performance.
+For reviewed human-generated data, supply the required train/validation/test
+JSONL files under `data/reviewed/` following [data contracts](docs/data_contracts.md),
+then run `python tools/hlo_train_all.py --mode reviewed`.
+The separate Dueling Double DQN policy is trained only when reviewed
+`transitions.train.jsonl` and `transitions.validation.jsonl` exist;
+`--require-policy` fails early if they are absent.
+
+Unique run outputs are written to `artifacts/full-*/`, including mT5 checkpoints,
+BKT model parameters, evaluation reports and charts. The script uses mT5 batch
+size 1 by default to reduce GPU memory needs; GPU availability, runtime limits,
+and model-download access still determine whether a particular Colab session
+can finish. Use `--save-to-drive` in Colab to copy completed artifacts to Drive.
+
 ## Train
 
 ```bash
