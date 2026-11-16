@@ -46,7 +46,10 @@ python tools/hlo_train_all.py --mode synthetic --dry-run
 Google Colab users can open the
 [one-click notebook](https://colab.research.google.com/github/asgmodel/recommendation-system/blob/main/Notebook/Colab/HLO_One_Click_Full_Training.ipynb),
 enable GPU under Runtime settings, and run its single code cell. It is self-contained
-and does not require uploading a second Python file.
+and does not require uploading a second Python file. Dataset statistics,
+training history, held-out metrics, BKT prediction charts, ranking comparisons,
+and recommendation plots are displayed as the cell runs and saved in the
+run directory.
 
 **Data provenance:** The checked-in development set is synthetic (45 questions,
 1,600 assessment events, 30 resources). Training on it updates model parameters,
